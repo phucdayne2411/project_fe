@@ -2,17 +2,64 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Frontend Netlify</title>
+    <title>Demo FE Netlify & BE Render</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        h1 { color: #1e40af; }
+        #dataForm {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            flex-grow: 1; /* Cho input chiếm nhiều không gian hơn */
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        #resultContainer {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 6px;
+        }
+        #loading {
+            color: orange;
+        }
+    </style>
 </head>
 <body>
-    <h1>Frontend (Netlify) gọi Backend (Render)</h1>
+    <h1>🚀 Demo Frontend (Netlify) & Backend (Render)</h1>
+    
     <form id="dataForm">
-        <input type="text" id="dataInput" required placeholder="Nhập tin nhắn..." />
-        <button type="submit">Gửi đến Backend</button>
+        <input type="text" id="dataInput" required placeholder="Nhập dữ liệu sẽ gửi đến Render Backend..." />
+        <button type="submit">Gửi API POST</button>
     </form>
 
-    <p>Phản hồi từ Backend:</p>
-    <pre id="backendResult">Chờ kết nối...</pre>
+    <div id="resultContainer">
+        <p><strong>Trạng thái kết nối:</strong> <span id="loading">Sẵn sàng.</span></p>
+        <p><strong>Phản hồi từ Backend:</strong></p>
+        <pre id="backendResult">Kết quả JSON sẽ hiện tại đây...</pre>
+    </div>
+    
+    <footer><small>Kiểm tra mạng lưới: FE từ Netlify gọi BE từ Render</small></footer>
 
     <script src="script.js"></script>
 </body>
