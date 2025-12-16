@@ -1,6 +1,6 @@
 // File: project-fe/script.js
 // CHÚ Ý: CẬP NHẬT URL NÀY SAU KHI DEPLOY BACKEND XONG (Bước 3)
-const BACKEND_URL = "https://YOUR-RENDER-BACKEND-URL.onrender.com"; 
+const BACKEND_URL = "https://project-be-1zr7.onrender.com"; 
 
 document.getElementById('dataForm').addEventListener('submit', function(event) {
     event.preventDefault();
